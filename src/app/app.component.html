@@ -1,0 +1,24 @@
+
+<div class="">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" routerLink="/detail-list" routerLinkActive="active">Navbar</a>
+    <a routerLink="/login" routerLinkActive="">Login</a>
+  </nav>
+</div>
+
+
+
+<router-outlet></router-outlet>
+<table class ="table" style="text-align: center;width: 50%;">
+  <tr *ngFor="let u of heroes">
+    <td>
+      {{u.id}}
+    </td>
+    <td>
+      {{u.name}}
+    </td>
+    <td>  
+      <button class= 'btn btn-info' (click)="updateUser()"> UPDATE DATA</button>
+    </td>
+  </tr>
+</table>

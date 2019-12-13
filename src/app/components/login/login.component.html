@@ -1,0 +1,17 @@
+<div class="main-div">
+    <mat-card class="center" flex="50">
+        <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+        <div class="example-container" style="text-align: center;">
+            <mat-form-field>
+                <input matInput  formControlName="username" placeholder="Username">
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+                <input type="password" matInput formControlName="password" placeholder="Password">
+            </mat-form-field>
+            <br>
+            <button mat-raised-button [disabled]="!profileForm.valid">Submit</button>
+        </div>
+    </form>
+    </mat-card>
+</div>
