@@ -1,10 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-export interface Hero {
-  id: number;
-  name: string;
-}
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -12,21 +6,14 @@ export interface Hero {
 })
 
 
-export class AppComponent implements OnInit{
-  private heroes: Hero[];
-
-  private heroesUrl = 'api/heroes';
+export class AppComponent implements OnInit {
   title = 'practise';
-  constructor(private http: HttpClient) { };
+  constructor() { };
 
   ngOnInit() {
-    this.getHeroes().subscribe(
-      data => this.heroes = data
-    )
+
   }
 
-  getHeroes(): Observable<Hero[]> {
-    return this.http.get<Hero[]>(this.heroesUrl)
-  }
-  
+
+
 }

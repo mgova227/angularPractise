@@ -19,7 +19,6 @@ export class LoginComponent implements OnInit {
 
   onSubmit() {
     // TODO: Use EventEmitter with form value
-    console.log(this.profileForm.value);
     this.router.navigate(["user-list",{data:JSON.stringify(this.profileForm.value)}]);
   }
 

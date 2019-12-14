@@ -12,7 +12,8 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   { path: 'detail-list', loadChildren: () => import('./details/details.module').then(m => m.DetailsModule) },
-  { path: 'user-list', loadChildren: () => import('./components/user/user.module').then(m => m.UserModule) }
+  { path: 'user-list', loadChildren: () => import('./components/user/user.module').then(m => m.UserModule) },
+  { path: 'custom-data', loadChildren: () => import('./components/custom/custom.module').then(m => m.CustomModule) }
 ];
 
 @NgModule({
