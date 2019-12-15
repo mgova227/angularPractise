@@ -48,4 +48,19 @@ export class CurdserviceService {
     throw new Error("Method not implemented.");
   }
 
+  /**
+   * @description get the Age based on date of birth
+   */
+  getAge(dateOfBirth: any) {
+    console.log(dateOfBirth,'============')
+    const today = new Date();
+    const birthDate = new Date("1992/08/12");
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const m = today.getMonth() - birthDate.getMonth();
+    if(m < 0 || (m == 0 && today.getDate() < birthDate.getDate())){
+      age--;
+    }
+    return age;
+  }
+
 }

@@ -14,10 +14,12 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from 'src/in-memory-data.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { AgecalculateDirective } from './directives/agecalculate.directive';
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    AgecalculateDirective
   ],
   imports: [
     BrowserModule,
