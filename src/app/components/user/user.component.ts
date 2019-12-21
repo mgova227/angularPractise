@@ -16,7 +16,7 @@ export class UserComponent implements OnInit {
   userData: any;
   name = '';
   value:string;
-  private heroes: Hero[];
+  public heroes: Hero[];
   private selectedData: any;
   constructor(private route: ActivatedRoute, private curdserviceService: CurdserviceService) { }
 
